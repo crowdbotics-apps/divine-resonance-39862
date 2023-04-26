@@ -7,12 +7,14 @@ import { Ionicons } from '@expo/vector-icons';
 const Screen = () => {
   const navigation = useNavigation();
   return <View style={_styles.nplOiXae}>
-      <View style={_styles.tYhhzlCV}>
+      <Pressable onPress={() => {
+      navigation.navigate("Privacy Policy");
+    }}><View style={_styles.tYhhzlCV}>
         <Image source={require('../assets/logo.png')} style={_styles.busaXaBS} />
         <TouchableOpacity>
           <Ionicons name="menu-outline" size={24} color="black" />
         </TouchableOpacity>
-      </View>
+      </View></Pressable>
       <View style={_styles.ntvvyPuM}>
         <Text style={_styles.NiAweviN}>Welcome to the App</Text>
         <Text style={_styles.rDOGTPAb}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien vel bibendum bibendum, velit sapien bibendum sapien, vel bibendum sapien velit.</Text>
