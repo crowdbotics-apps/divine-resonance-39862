@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
+import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, CheckBox } from 'react-native';
 
 const LoginPage = () => {
+  const navigation = useNavigation();
   const [phoneNumber, setPhoneNumber] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
 
@@ -19,9 +22,11 @@ const LoginPage = () => {
   return <View style={styles.container}>
       <Image source={require('../assets/logo.png')} style={styles.logo} />
       <Text style={styles.title}>Welcome Back!</Text>
-      <View style={styles.inputContainer}>
+      <Pressable onPress={() => {
+      navigation.navigate("Untitled5");
+    }}><View style={styles.inputContainer}>
         <TextInput style={styles.input} placeholder="Phone Number" keyboardType="phone-pad" value={phoneNumber} onChangeText={handlePhoneNumberChange} />
-      </View>
+      </View></Pressable>
       <View style={styles.checkboxContainer}>
         <CheckBox value={rememberMe} onValueChange={handleRememberMeChange} />
         <Text style={styles.checkboxLabel}>Remember Me</Text>
