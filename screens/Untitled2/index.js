@@ -27,10 +27,12 @@ const LoginPage = () => {
     }}><View style={styles.inputContainer}>
         <TextInput style={styles.input} placeholder="Phone Number" keyboardType="phone-pad" value={phoneNumber} onChangeText={handlePhoneNumberChange} />
       </View></Pressable>
-      <View style={styles.checkboxContainer}>
+      <Pressable onPress={() => {
+      navigation.navigate("Untitled7");
+    }}><View style={styles.checkboxContainer}>
         <CheckBox value={rememberMe} onValueChange={handleRememberMeChange} />
         <Text style={styles.checkboxLabel}>Remember Me</Text>
-      </View>
+      </View></Pressable>
       <TouchableOpacity style={styles.signupButton} onPress={handleSignupPress}>
         <Text style={styles.signupButtonText}>Sign Up</Text>
       </TouchableOpacity>
