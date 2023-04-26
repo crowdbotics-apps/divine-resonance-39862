@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { Pressable } from "react-native";
+import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
 const VerifyScreen = ({
@@ -16,7 +17,9 @@ const VerifyScreen = ({
       <TouchableOpacity onPress={() => navigation.goBack()}>
         <Text style={styles.backButton}>Back</Text>
       </TouchableOpacity>
-      <Text style={styles.title}>Verify Your Account</Text>
+      <Pressable onPress={() => {
+      navigation.navigate("Untitled6");
+    }}><Text style={styles.title}>Verify Your Account</Text></Pressable>
       <Text style={styles.subtitle}>Enter the 4-digit code we sent to your phone number</Text>
       <TextInput style={styles.input} placeholder="Enter code" keyboardType="numeric" value={token} onChangeText={setToken} />
       <TouchableOpacity style={styles.verifyButton} onPress={handleVerify}>
