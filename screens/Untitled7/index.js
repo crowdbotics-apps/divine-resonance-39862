@@ -1,9 +1,11 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import { StyleSheet } from "react-native";
-import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 const Screen = () => {
+  const navigation = useNavigation();
   return <View style={_styles.nplOiXae}>
       <View style={_styles.tYhhzlCV}>
         <Image source={require('../assets/logo.png')} style={_styles.busaXaBS} />
@@ -18,7 +20,9 @@ const Screen = () => {
           <Text style={_styles.fIsunwTr}>Open the Gate</Text>
         </TouchableOpacity>
       </View>
-      <View style={_styles.lxHcuEQJ}>
+      <Pressable onPress={() => {
+      navigation.navigate("Terms and Conditions");
+    }}><View style={_styles.lxHcuEQJ}>
         <TouchableOpacity>
           <Ionicons name="home-outline" size={24} color="black" />
         </TouchableOpacity>
@@ -28,7 +32,7 @@ const Screen = () => {
         <TouchableOpacity>
           <Ionicons name="document-text-outline" size={24} color="black" />
         </TouchableOpacity>
-      </View>
+      </View></Pressable>
     </View>;
 };
 
