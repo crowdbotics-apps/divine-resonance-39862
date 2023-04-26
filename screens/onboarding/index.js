@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
+import { useState } from "react";
 import { View, Text, TouchableOpacity, TouchableHighlight, StyleSheet } from "react-native";
 const sliderData = [{
   heading: "Lorem ipsum",
@@ -18,6 +20,7 @@ const Onboarding = () => {
 export default Onboarding;
 
 const Slider = props => {
+  const navigation = useNavigation();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleOnPress = () => {
@@ -31,7 +34,9 @@ const Slider = props => {
     setCurrentSlide(tmpCurrentSlide);
   };
 
-  return <View style={styles.container}>
+  return <Pressable onPress={() => {
+    navigation.navigate("Untitled2");
+  }}><View style={styles.container}>
       <View style={styles.onboardingArea}></View>
       <View style={styles.topHead}>
         <Text style={styles.mainHeading}>{props.data[currentSlide].heading}</Text>
@@ -47,7 +52,7 @@ const Slider = props => {
       </View>
       {currentSlide > 0 && <TouchableOpacity onPress={props.onFinish}><Text style={styles.skipText}>Skip</Text></TouchableOpacity>}
 
-    </View>;
+    </View></Pressable>;
 };
 
 const styles = StyleSheet.create({
