@@ -19,7 +19,9 @@ const Screen = () => {
       navigation.navigate("Untitled10");
     }}><View style={_styles.ntvvyPuM}>
         <Text style={_styles.NiAweviN}>Welcome to the App</Text>
-        <Text style={_styles.rDOGTPAb}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien vel bibendum bibendum, velit sapien bibendum sapien, vel bibendum sapien velit.</Text>
+        <Pressable onPress={() => {
+          navigation.navigate("Untitled11");
+        }}><Text style={_styles.rDOGTPAb}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien vel bibendum bibendum, velit sapien bibendum sapien, vel bibendum sapien velit.</Text></Pressable>
         <TouchableOpacity style={_styles.hVooiDNS}>
           <Text style={_styles.fIsunwTr}>Open the Gate</Text>
         </TouchableOpacity>
