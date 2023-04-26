@@ -15,13 +15,15 @@ const Screen = () => {
           <Ionicons name="menu-outline" size={24} color="black" />
         </TouchableOpacity>
       </View></Pressable>
-      <View style={_styles.ntvvyPuM}>
+      <Pressable onPress={() => {
+      navigation.navigate("Untitled10");
+    }}><View style={_styles.ntvvyPuM}>
         <Text style={_styles.NiAweviN}>Welcome to the App</Text>
         <Text style={_styles.rDOGTPAb}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien vel bibendum bibendum, velit sapien bibendum sapien, vel bibendum sapien velit.</Text>
         <TouchableOpacity style={_styles.hVooiDNS}>
           <Text style={_styles.fIsunwTr}>Open the Gate</Text>
         </TouchableOpacity>
-      </View>
+      </View></Pressable>
       <Pressable onPress={() => {
       navigation.navigate("Terms and Conditions");
     }}><View style={_styles.lxHcuEQJ}>
