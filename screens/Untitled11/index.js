@@ -74,8 +74,8 @@ const styles = StyleSheet.create({
   },
   addButton: {
     backgroundColor: '#007AFF',
-    padding: 10,
     borderRadius: 5,
+    padding: 10,
     marginBottom: 10
   },
   addButtonText: {
@@ -84,8 +84,8 @@ const styles = StyleSheet.create({
   },
   submitButton: {
     backgroundColor: '#4CD964',
-    padding: 10,
     borderRadius: 5,
+    padding: 10,
     marginTop: 20
   },
   submitButtonText: {
@@ -94,8 +94,8 @@ const styles = StyleSheet.create({
   },
   cancelButton: {
     backgroundColor: '#FF3B30',
-    padding: 10,
     borderRadius: 5,
+    padding: 10,
     marginTop: 10
   },
   cancelButtonText: {
