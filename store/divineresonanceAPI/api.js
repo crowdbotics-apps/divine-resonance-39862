@@ -9,16 +9,16 @@ function api_docs_schema_retrieve(payload) {
   })
 }
 function api_v1_login_create(payload) {
-  return divineresonanceAPI.post(`/api/v1/login/`, payload.data)
+  return divineresonanceAPI.post(`/api/v1/login/`, payload)
 }
 function api_v1_signup_create(payload) {
-  return divineresonanceAPI.post(`/api/v1/signup/`, payload.data)
+  return divineresonanceAPI.post(`/api/v1/signup/`, payload)
 }
 function modules_privacy_policy_list(payload) {
   return divineresonanceAPI.get(`/modules/privacy-policy/`)
 }
 function modules_privacy_policy_create(payload) {
-  return divineresonanceAPI.post(`/modules/privacy-policy/`, payload.data)
+  return divineresonanceAPI.post(`/modules/privacy-policy/`, payload)
 }
 function modules_privacy_policy_retrieve(payload) {
   return divineresonanceAPI.get(`/modules/privacy-policy/${payload.id}/`)
@@ -26,13 +26,13 @@ function modules_privacy_policy_retrieve(payload) {
 function modules_privacy_policy_update(payload) {
   return divineresonanceAPI.put(
     `/modules/privacy-policy/${payload.id}/`,
-    payload.data
+    payload
   )
 }
 function modules_privacy_policy_partial_update(payload) {
   return divineresonanceAPI.patch(
     `/modules/privacy-policy/${payload.id}/`,
-    payload.data
+    payload
   )
 }
 function modules_privacy_policy_destroy(payload) {
@@ -42,7 +42,7 @@ function modules_terms_and_conditions_list(payload) {
   return divineresonanceAPI.get(`/modules/terms-and-conditions/`)
 }
 function modules_terms_and_conditions_create(payload) {
-  return divineresonanceAPI.post(`/modules/terms-and-conditions/`, payload.data)
+  return divineresonanceAPI.post(`/modules/terms-and-conditions/`, payload)
 }
 function modules_terms_and_conditions_retrieve(payload) {
   return divineresonanceAPI.get(`/modules/terms-and-conditions/${payload.id}/`)
@@ -50,13 +50,13 @@ function modules_terms_and_conditions_retrieve(payload) {
 function modules_terms_and_conditions_update(payload) {
   return divineresonanceAPI.put(
     `/modules/terms-and-conditions/${payload.id}/`,
-    payload.data
+    payload
   )
 }
 function modules_terms_and_conditions_partial_update(payload) {
   return divineresonanceAPI.patch(
     `/modules/terms-and-conditions/${payload.id}/`,
-    payload.data
+    payload
   )
 }
 function modules_terms_and_conditions_destroy(payload) {
@@ -65,7 +65,7 @@ function modules_terms_and_conditions_destroy(payload) {
   )
 }
 function rest_auth_login_create(payload) {
-  return divineresonanceAPI.post(`/rest-auth/login/`, payload.data)
+  return divineresonanceAPI.post(`/rest-auth/login/`, payload)
 }
 function rest_auth_logout_retrieve(payload) {
   return divineresonanceAPI.get(`/rest-auth/logout/`)
@@ -74,34 +74,31 @@ function rest_auth_logout_create(payload) {
   return divineresonanceAPI.post(`/rest-auth/logout/`)
 }
 function rest_auth_password_change_create(payload) {
-  return divineresonanceAPI.post(`/rest-auth/password/change/`, payload.data)
+  return divineresonanceAPI.post(`/rest-auth/password/change/`, payload)
 }
 function rest_auth_password_reset_create(payload) {
-  return divineresonanceAPI.post(`/rest-auth/password/reset/`, payload.data)
+  return divineresonanceAPI.post(`/rest-auth/password/reset/`, payload)
 }
 function rest_auth_password_reset_confirm_create(payload) {
-  return divineresonanceAPI.post(
-    `/rest-auth/password/reset/confirm/`,
-    payload.data
-  )
+  return divineresonanceAPI.post(`/rest-auth/password/reset/confirm/`, payload)
 }
 function rest_auth_registration_create(payload) {
-  return divineresonanceAPI.post(`/rest-auth/registration/`, payload.data)
+  return divineresonanceAPI.post(`/rest-auth/registration/`, payload)
 }
 function rest_auth_registration_verify_email_create(payload) {
   return divineresonanceAPI.post(
     `/rest-auth/registration/verify-email/`,
-    payload.data
+    payload
   )
 }
 function rest_auth_user_retrieve(payload) {
   return divineresonanceAPI.get(`/rest-auth/user/`)
 }
 function rest_auth_user_update(payload) {
-  return divineresonanceAPI.put(`/rest-auth/user/`, payload.data)
+  return divineresonanceAPI.put(`/rest-auth/user/`, payload)
 }
 function rest_auth_user_partial_update(payload) {
-  return divineresonanceAPI.patch(`/rest-auth/user/`, payload.data)
+  return divineresonanceAPI.patch(`/rest-auth/user/`, payload)
 }
 export const apiService = {
   api_docs_schema_retrieve,
